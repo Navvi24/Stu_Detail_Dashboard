@@ -227,4 +227,4 @@ function get_fee_detail( $conn )
     }
   }
   return $row;
-} 
+}

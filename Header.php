@@ -26,7 +26,7 @@ require_once('functions.php');
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
       <header class="main-header">
-        <a href="index2.html" class="logo">
+        <a href="mainpage.php" class="logo">
           <span class="logo-mini"><b>STUDENT</b>detail</span>
           <span class="logo-lg"><b>STUDENT</b>detail</span>
       </a>

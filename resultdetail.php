@@ -1,3 +1,78 @@
+<script type="text/javascript">
+  function validation()
+  {
+    var sub1 = document.forms["stuform"]["subject1"];
+    var marks1 = document.forms["stuform"]["marks1"];
+    var sub2 = document.forms["stuform"]["subject2"];
+    var marks2 = document.forms["stuform"]["marks2"];
+    var sub3 = document.forms["stuform"]["subject3"];
+    var marks3 = document.forms["stuform"]["marks3"];
+    var sub4 = document.forms["stuform"]["subject4"];
+    var marks4 = document.forms["stuform"]["marks4"];
+    var sub5 = document.forms["stuform"]["subject5"];
+    var marks5 = document.forms["stuform"]["marks5"];
+    if (sub1.value == "")
+    {
+        window.alert("Please enter your subject name");
+        sub1.focus();
+        return false;
+    }
+    if (marks1.value == "")
+    {
+        window.alert("Please enter your marks");
+        marks1.focus();
+        return false;
+    }
+    if (sub2.value == "")
+    {
+        window.alert("Please enter your subject name");
+        sub2.focus();
+        return false;
+    }
+    if (marks2.value == "")
+    {
+        window.alert("Please enter your marks");
+        marks2.focus();
+        return false;
+    }
+    if (sub3.value == "")
+    {
+        window.alert("Please enter your subject name");
+        sub3.focus();
+        return false;
+    }
+    if (marks3.value == "")
+    {
+        window.alert("Please enter your marks");
+        marks3.focus();
+        return false;
+    }
+    if (sub4.value == "")
+    {
+        window.alert("Please enter your subject name");
+        sub4.focus();
+        return false;
+    }
+    if (marks4.value == "")
+    {
+        window.alert("Please enter your marks");
+        marks4.focus();
+        return false;
+    }
+    if (sub5.value == "")
+    {
+        window.alert("Please enter your subject name");
+        sub5.focus();
+        return false;
+    }
+    if (marks5.value == "")
+    {
+        window.alert("Please enter your marks");
+        marks5.focus();
+        return false;
+    }
+  }
+</script>
 <?php
 include "header.php";
 if (isset($_GET['rollno']))
@@ -29,7 +104,7 @@ if (isset($_GET['rollno']))
               <h3 class="box-title">Student Marks Details</h3>
             </div>
             <div class="box-body">
-              <form role="form" action="resultprocess.php" method="post">
+              <form role="form" action="resultprocess.php" method="post" name="stuform" onsubmit="return validation()">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="Rollno">Rollno.</label>

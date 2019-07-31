@@ -1,3 +1,15 @@
+<script type="text/javascript">
+function validation()
+{
+  var roll = document.forms["stuform"]["rollno"];
+  if (roll.value == "")
+  {
+      window.alert("Please enter rolln no.");
+      roll.focus();
+      return false;
+  }
+}
+</script>
 <?php
 include "header.php"
  ?>
@@ -23,7 +35,7 @@ include "header.php"
               <h3 class="box-title">Delete Student Detail</h3>
             </div>
             <div class="box-body">
-              <form role="form" action="deletestudentprocess.php" method="post">
+              <form role="form" action="deletestudentprocess.php" method="post" name="stuform" onsubmit="return validation()">
                 <div class="form-row">
                   <div class="form-group col-md-11">
                       <label for="Name">Enter Roll No.</label>
@@ -33,6 +45,9 @@ include "header.php"
                   <div class="form-group col-md-4"></div>
                   <div class="form-group col-md-4">
                     <button type="submit" class="btn btn-block btn-success margin">Delete Student Detail</button>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <small>(Before delete any student detail first enter a score of student.)</small>
                   </div>
                   <div class="form-group col-md-4"></div>
                 </div>

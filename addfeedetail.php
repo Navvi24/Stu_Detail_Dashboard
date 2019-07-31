@@ -1,3 +1,36 @@
+<script type="text/javascript">
+  function validation()
+  {
+    var roll = document.forms["stuform"]["rollno"];
+    var fee = document.forms["stuform"]["fee"];
+    var paid = document.forms["stuform"]["paid"];
+    var unpaid = document.forms["stuform"]["unpaid"];
+    if (roll.value == "")
+    {
+        window.alert("Please enter your roll no.");
+        roll.focus();
+        return false;
+    }
+    if (fee.value == "")
+    {
+        window.alert("Please enter your fee detail.");
+        fee.focus();
+        return false;
+    }
+    if (paid.value == "")
+    {
+        window.alert("Please enter your paid fee.");
+        paid.focus();
+        return false;
+    }
+    if (unpaid.value == "")
+    {
+        window.alert("Please enter your unpaid fee. if it is not then enter 0.");
+        unpaid.focus();
+        return false;
+    }
+  }
+</script>
 <?php
 include "header.php";
 if (isset($_GET['rollno']))
@@ -31,7 +64,7 @@ else
               <h3 class="box-title">Add Fee Details</h3>
             </div>
             <div class="box-body">
-              <form role="form" action="feeprocess.php" method="post">
+              <form role="form" action="feeprocess.php" method="post" name="stuform" onsubmit="return validation()">
                 <div class="form-row">
                   <div class="form-group col-md-3">
                       <label for="Name">Enter Rollno</label>

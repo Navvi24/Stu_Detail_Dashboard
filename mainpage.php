@@ -1,5 +1,58 @@
+<script type="text/javascript">
+  function validation()
+  {
+    var name = document.forms["stuform"]["name"];
+    var roll = document.forms["stuform"]["rollno"];
+    var father = document.forms["stuform"]["father"];
+    var mother = document.forms["stuform"]["mother"];
+    var cls = document.forms["stuform"]["cls"];
+    var phone = document.forms["stuform"]["phonenumber"];
+    var address = document.forms["stuform"]["address"];
+    if (name.value == "")
+    {
+        window.alert("Please enter your name.");
+        name.focus();
+        return false;
+    }
+    if (roll.value == "")
+    {
+        window.alert("Please enter your roll no.");
+        roll.focus();
+        return false;
+    }
+    if (father.value == "")
+    {
+        window.alert("Please enter your Father Name.");
+        father.focus();
+        return false;
+    }
+    if (mother.value == "")
+    {
+        window.alert("Please enter your Mother Name.");
+        mother.focus();
+        return false;
+    }
+    if (cls.value == "")
+    {
+        window.alert("Please enter your class.");
+        cls.focus();
+        return false;
+    }
+    if (phone.value == "")
+    {
+        window.alert("Please enter your phone number.");
+        phone.focus();
+        return false;
+    }
+    if (address.value == "")
+    {
+        window.alert("Please enter your address.");
+        address.focus();
+        return false;
+    }
+  }
+</script>
 <?php
-
 include "header.php";
 if (isset($_GET['rollno']))
 {
@@ -20,7 +73,6 @@ else
          <li class="active">Add Student Details</li>
        </ol>
      </section>
-
      <!-- Main content -->
      <section class="content">
        <section class="content">
@@ -31,7 +83,7 @@ else
               <h3 class="box-title">Student Details</h3>
             </div>
             <div class="box-body">
-              <form role="form" action="studentprocess.php" method="post">
+              <form role="form" action="studentprocess.php" method="post" name="stuform" onsubmit="return validation()">
                 <div class="form-row">
                   <div class="form-group col-md-11">
                       <label for="Name">Name</label>

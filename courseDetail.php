@@ -1,3 +1,15 @@
+<script type="text/javascript">
+function validation()
+{
+  var course = document.forms["stuform"]["courseName"];
+  if (course.value == "")
+  {
+      window.alert("Please enter course name.");
+      course.focus();
+      return false;
+  }
+}
+</script>
 <?php
 include "header.php"
  ?>
@@ -23,7 +35,7 @@ include "header.php"
               <h3 class="box-title">Course Details</h3>
             </div>
             <div class="box-body">
-              <form role="form" action="courseprocess.php" method="post">
+              <form role="form" action="courseprocess.php" method="post" name="stuform" onsubmit="return validation()">
                 <div class="form-row">
                   <div class="form-group col-md-11">
                       <label for="Name">Course Name</label>
